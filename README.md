@@ -170,12 +170,16 @@
 	*  其他参数都可以保持不变
 	*	最重要的是content参数的加密
 			*content是里面是手机号码进行加密
-			*每个手机号码拼成：“[\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:e6d7b85566fea4be1c5ad0850be24208\\r\\nFN:cS \\r\\nTEL;TYPE\\u003dcell:15099916550\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\",\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:1a3cec7e59e419473b0e1822479967a8\\r\\nFN:15989297907\\r\\nTEL;TYPE\\u003dcell:13265636450\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\",\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:923bc1312452e69ab567ca5e7a627818\\r\\nFN:15989297907\\r\\nTEL;TYPE\\u003dcell:15989297907\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\"]”
+			
+			*每个手机号码拼成：“[\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo      Sync/1.0\\r\\nUID:e6d7b85566fea4be1c5ad0850be24208\\r\\nFN:cS \\r\\nTEL;TYPE\\u003dcell:15099916550\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\",\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:1a3cec7e59e419473b0e1822479967a8\\r\\nFN:15989297907\\r\\nTEL;TYPE\\u003dcell:13265636450\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\",\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:923bc1312452e69ab567ca5e7a627818\\r\\nFN:15989297907\\r\\nTEL;TYPE\\u003dcell:15989297907\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\"]”
+			
 			*最后所有电话号码结果为：content= “[[\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:e6d7b85566fea4be1c5ad0850be24208\\r\\nFN:cS \\r\\nTEL;TYPE\\u003dcell:15099916550\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\",\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:1a3cec7e59e419473b0e1822479967a8\\r\\nFN:15989297907\\r\\nTEL;TYPE\\u003dcell:13265636450\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\",\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:923bc1312452e69ab567ca5e7a627818\\r\\nFN:15989297907\\r\\nTEL;TYPE\\u003dcell:15989297907\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\"],[\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:e6d7b85566fea4be1c5ad0850be24208\\r\\nFN:cS \\r\\nTEL;TYPE\\u003dcell:15099916550\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\",\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:1a3cec7e59e419473b0e1822479967a8\\r\\nFN:15989297907\\r\\nTEL;TYPE\\u003dcell:13265636450\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\",\"BEGIN:VCARD\\r\\nVERSION:3.0\\r\\nPRODID:Sina Weibo Sync/1.0\\r\\nUID:923bc1312452e69ab567ca5e7a627818\\r\\nFN:15989297907\\r\\nTEL;TYPE\\u003dcell:15989297907\\r\\nREV:20180814T135035Z\\r\\nEND:VCARD\\r\\n\"]]”
+			
 			*把所有电话号码拼成的结果进行加密Encripy.a(getPhoneDatas(content))，得到即为content
+			
 			*返回的结果没有加密
 				*通过urlhttps://api.weibo.cn/2/friendships/contact_recommend_user?networktype=wifi&uicode=10000668&moduleID=701&wb_version=3728&user_id=6637823586&c=android&i=dab8b20&s=6730418a&ft=0&ua=LGE-Nexus%205__weibo__8.8.1__android__android4.4.3&wm=90061_90050&aid=01AiTwKue6ovmaTxynr545K7Oq5aE-EeMCqe8FuEKB76UmovY.&v_f=2&v_p=63&from=1088195010&gdid=359250051841177&gsid=_2A252d_LKDeRxGeBI6FUZ8i3JwzqIHXVTJQECrDV6PUJbmdAKLVTekWpNRpjm1YGrACObX0lHp19dMtwNQwIoQvSo&lang=zh_CN&skin=default&oldwm=90061_90050&scene=1&sflag=1&luicode=10000667&has_member=1&cum=D0D4D0E2
-					获取上传的用户信息，可以获取到用户id，喜好以及电话号码等信息
+				获取上传的用户信息，可以获取到用户id，喜好以及电话号码等信息
 			
 	
 
