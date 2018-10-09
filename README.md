@@ -193,5 +193,5 @@
 
 
 ##代码样例
-* 未完待续！！！
+* https://github.com/yuanchao1893/weibo_encryption/tree/master/example
 
