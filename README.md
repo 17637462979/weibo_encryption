@@ -6,7 +6,7 @@
 
 ##加密原理
 
-* 通过反编译抖音APP，破解接口中的参数，上传接口为：
+* 通过反编译微博APP，破解接口中的参数，上传接口为：
     *  POST https://api.weibo.cn/2/contacts/upload/full?lang=zh_CN&sflag=1&cum=B8796A40 HTTP/1.1
 		Host: api.weibo.cn
 		Connection: keep-alive
